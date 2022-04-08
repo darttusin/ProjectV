@@ -1,0 +1,28 @@
+[[package]]
+name = "gst"
+version = "0.1.0"
+description = "Git status tool"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "pgi"
+version = "0.0.11.2"
+description = "Pure Python GObject Introspection Bindings"
+category = "main"
+optional = false
+python-versions = "*"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.10.2"
+content-hash = "7a07fd80c2c892a4865000edced74b1680f242ae237bcd64742c96d589dd8e96"
+
+[metadata.files]
+gst = [
+    {file = "gst-0.1.0.tar.gz", hash = "sha256:47fd137b187196f99c33b9acb664d2016916c0a9ea87c17f07a4cac206aeccb8"},
+]
+pgi = [
+    {file = "pgi-0.0.11.2.tar.gz", hash = "sha256:5b011ff4d81f83eed4380b0c72876be9b5572c4ed97e2b784dce477183c934f5"},
+]
