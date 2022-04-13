@@ -15,12 +15,8 @@ const Home: React.FC = () => {
     };
     return (
         <HomeStyled>
-            <TextFilledStyled>
 
-                <TextStyled textSize={25} fontWeight={'normal'} color={'Black'}>
-                    Здесь видос будет
-                </TextStyled>
-            </TextFilledStyled>
+            <video src="для ссылки" controls />
 
             <ButtonFilledStyled width={100} height={20} justifycontent={'space-between'}>
                 <ButtonStyled onClick={exitToHome}>
