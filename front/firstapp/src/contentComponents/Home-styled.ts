@@ -5,7 +5,7 @@ export const HomeStyled = styled.div`
   display: flex;
   flex-direction: column;
   width: 43%;
-  justify-content: space-between;
+  justify-content: center;
   background-color: azure;
   border-radius: 7px;
   padding: 35px 20px 35px 20px;
