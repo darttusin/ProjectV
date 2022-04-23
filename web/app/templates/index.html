@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+    body { 
+     margin: 0; /* Убираем отступы */
+    }
+    .child {
+     margin-top: 5%;
+     text-align: center;
+    }
+    </style>
+
+    <div class="container text-center">
+        <h1>Stream</h1>
+    <video autoplay src="http://localhost:8080">
+        Mario
+    </video>
+    </div>
+    
+
+    <style>
+        div.container {
+            margin-top: 40px;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
