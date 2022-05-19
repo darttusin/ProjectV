@@ -10,12 +10,12 @@ git clone https://github.com/darttusin/ProjectV
 ```
 - Запускаем opencv с gstreamer через DOCKER COMPOSE
 
-with windows file system folder mounted
+с подключенной папкой файловой системы Windows
 ```
 winpty docker run -v //c/data:/home/data -p 5000:5000/udp -p 5004:5004/udp -it video_test.py 
 ```
- with wsl file system folder mounted
-	  this is faster since docker and wsl share the same filesystem
+при смонтированной папке файловой системы wsl
+это происходит быстрее, так как docker и будет использовать одну и ту же файловую систему
 ```
 winpty docker run -v //wsl$/Ubuntu-20.04/home/<user_name>/data:/home/data -it video_test.py 
 ```
