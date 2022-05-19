@@ -42,7 +42,7 @@ COUNT=False
 
 import psycopg2
 conn = psycopg2.connect(dbname='tracking_stats', user='postgres', 
-                        password=',jnhfzlj', host='82.146.40.163')
+                        password=',jnhfzlj', host='localhost')
 cursor = conn.cursor()
 
 def set_flags():
