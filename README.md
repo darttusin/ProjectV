@@ -27,7 +27,7 @@ winpty docker run -v //wsl$/Ubuntu-20.04/home/<user_name>/data:/home/data -it vi
 ```
 CREATE DATABASE tracking_stats;
 ```
-- Как создать пользователя MySQL в командной строке
+- Создание пользователя MySQL в командной строке
 В командной строке MySQL это делается следующим образом:
 ```
 CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
