@@ -32,7 +32,16 @@ services:
     networks:
       - postgres
     restart: unless-stopped
-    
+
+  web:
+    container_name: web-container
+    build: ./web
+    ports:
+      - 9000:9000
+    networks:
+      - rayadonet
+    restart: unless-stopped
+
 networks:
   postgres:
     driver: bridge
