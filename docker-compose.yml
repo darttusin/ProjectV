@@ -42,5 +42,3 @@ networks:
 volumes:
     postgres:
     pgadmin:
-    bots-db:
-    bots-db-tg:
