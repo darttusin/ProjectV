@@ -37,6 +37,10 @@ CREATE TABLE tracking_stats_table (
     coordymax INT NOT NULL
 );
 ```
+- Должна получится вот такая структура таблицы
+
+![alt text](https://sun9-81.userapi.com/s/v1/if2/kJDwM1mggGm60ZxmlgDvEFnutT_3DY-LDTPu1E7P1euJhpyUOlWOgcV4nenYpqSBuQz5miMrW-G7Fo2r2yexjqhz.jpg?size=294x200&quality=96&type=album)
+
 - Поднимаем все остальные контейнеры
 ```
 docker-compose up --build
@@ -47,5 +51,5 @@ docker ps -a
 ```
 - Вы должны увидеть список запущенных контейнеров
 
-![alt text](https://sun9-43.userapi.com/s/v1/if2/kzkp5jX5YANBvcpWSlW4q-iorJD9_SgEJWcfCG83paW0lSiaOFOzJPyOSs88z3bCZilhTIcLvPg54uLvW-Uapxo8.jpg?size=1210x122&quality=96&type=album)
+![alt text](https://sun9-17.userapi.com/s/v1/if2/GcnHbTA2-dX02bYUcRCGYf0SMwbedgfsRUSQ_7CI7BlFQezEHY2r-MectHhZ_bLmoMNQBEhS8nTN8knqhWfcTolj.jpg?size=1210x113&quality=96&type=album)
 
