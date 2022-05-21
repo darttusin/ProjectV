@@ -39,7 +39,7 @@ CREATE TABLE tracking_stats_table (
 ```
 - Должна получится вот такая структура таблицы
 
-     ![alt text](https://sun9-81.userapi.com/s/v1/if2/kJDwM1mggGm60ZxmlgDvEFnutT_3DY-LDTPu1E7P1euJhpyUOlWOgcV4nenYpqSBuQz5miMrW-G7Fo2r2yexjqhz.jpg?size=294x200&quality=96&type=album)
+  ![alt text](https://sun9-81.userapi.com/s/v1/if2/kJDwM1mggGm60ZxmlgDvEFnutT_3DY-LDTPu1E7P1euJhpyUOlWOgcV4nenYpqSBuQz5miMrW-G7Fo2r2yexjqhz.jpg?size=294x200&quality=96&type=album)
 
 - Поднимаем все остальные контейнеры
 ```
