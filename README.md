@@ -46,5 +46,6 @@ docker-compose up --build
 docker ps -a
 ```
 - Вы должны увидеть список запущенных контейнеров
+
 ![alt text](https://sun9-43.userapi.com/s/v1/if2/kzkp5jX5YANBvcpWSlW4q-iorJD9_SgEJWcfCG83paW0lSiaOFOzJPyOSs88z3bCZilhTIcLvPg54uLvW-Uapxo8.jpg?size=1210x122&quality=96&type=album)
 
