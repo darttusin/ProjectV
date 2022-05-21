@@ -53,4 +53,4 @@ docker ps -a
 
 ![alt text](https://sun9-17.userapi.com/s/v1/if2/GcnHbTA2-dX02bYUcRCGYf0SMwbedgfsRUSQ_7CI7BlFQezEHY2r-MectHhZ_bLmoMNQBEhS8nTN8knqhWfcTolj.jpg?size=1210x113&quality=96&type=album)
 
-####Это означает что у вас всё запущено и работает.
+
