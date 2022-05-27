@@ -1,25 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <br><br><br><br><br>
+    <h1 class="text-center">ProjectV</h1>
+    <br><br><br><br><br>
+    <h3 class="text-center">Upload the file with .mp4 resolution</h3>
+    <br><br>
+    <form style='text-align: center;' method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+    <br><br>
+    <h4 class="text-center">You can only upload the file with .mp4 resolution</h4>
     <style>
-    body { 
-     margin: 0;
-    }
-    .child {
-     margin-top: 5%;
-     text-align: center;
-    }
-    </style>
-
-    <div class="container text-center">
-        <h1>You can only download a file with .mp4 resolution</h1>
-    </div>
-    
-
-    <style>
-        div.container {
-            margin-top: 40px;
-            text-align: center;
+        body { 
+         margin: 0;
+        }
+        .parent {
+         margin-top: 10%;
+         margin-left: 20%
+         
+        } 
+        .child {
+         margin-top: 5px;
+         margin-left: 25%
         }
     </style>
+    
+    
 {% endblock %}
