@@ -1,0 +1,8 @@
+psycopg2-binary
+lxml
+tqdm
+tensorflow
+absl-py
+easydict
+matplotlib
+pillow

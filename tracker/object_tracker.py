@@ -9,8 +9,6 @@ import tensorflow as tf
 physical_devices = tf.config.experimental.list_physical_devices('GPU')
 if len(physical_devices) > 0:
     tf.config.experimental.set_memory_growth(physical_devices[0], True)
-from absl import app, flags, logging
-from absl.flags import FLAGS
 import core.utils as utils
 from core.yolov4 import filter_boxes
 from tensorflow.python.saved_model import tag_constants
@@ -42,10 +40,10 @@ COUNT=False
 
 import psycopg2
 conn = psycopg2.connect(dbname='tracking_stats', user='postgres', 
-                        password=',admin', host='localhost')
+                        password=',jnhfzlj', host='basic-postgres')
 cursor = conn.cursor()
 
-def set_flags():
+"""def set_flags():
     flags.DEFINE_string('framework', 'tf', '(tf, tflite, trt')
     flags.DEFINE_string('weights', './checkpoints/yolov4-416',
                         'path to weights file')
@@ -60,9 +58,12 @@ def set_flags():
     flags.DEFINE_boolean('dont_show', False, 'dont show video output')
     flags.DEFINE_boolean('info', True, 'show detailed info of tracked objects')
     flags.DEFINE_boolean('count', False, 'count objects being tracked on screen')
+    flags.DEFINE_string('host', '0.0.0.0', 'host')
+    flags.DEFINE_string('port', '8081', 'port')"""
 
-def main(_argv):
+def main():
     # Definition of the parameters
+    print('Inside Main')
     max_cosine_distance = 0.4
     nn_budget = None
     nms_max_overlap = 1.0
@@ -79,7 +80,7 @@ def main(_argv):
     config = ConfigProto()
     config.gpu_options.allow_growth = True
     session = InteractiveSession(config=config)
-    STRIDES, ANCHORS, NUM_CLASS, XYSCALE = utils.load_config(FLAGS)
+    #STRIDES, ANCHORS, NUM_CLASS, XYSCALE = utils.load_config(FLAGS)
     input_size = SIZE
     video_path = VIDEO
     saved_model_loaded = tf.saved_model.load(WEIGHTS, tags=[tag_constants.SERVING])
@@ -88,20 +89,24 @@ def main(_argv):
     # begin video capture
    
     # pipe_out = 'appsrc ! videoconvert ! x264enc tune=zerolatency bitrate=500 speed-preset=superfast ! rtspclientsink location=rtsp://0.0.0.0:8554/mystream'
-    pipe_out = 'appsrc ! videoconvert ! x264enc tune=zerolatency bitrate=700 speed-preset=superfast ! decodebin ! autovideoconvert ! theoraenc ! oggmux ! tcpserversink host=127.0.0.1 port=8080'
+    print('Before Pipe out')
+    pipe_out = 'appsrc ! videoconvert ! x264enc tune=zerolatency bitrate=700 speed-preset=superfast ! decodebin ! autovideoconvert ! theoraenc ! oggmux ! tcpserversink host=0.0.0.0 port=8080'
 
    
     try:
-        vid = cv2.VideoCapture("filesrc location=./data/video/hype.mp4 ! decodebin ! videoconvert ! appsink", cv2.CAP_GSTREAMER)
+        vid = cv2.VideoCapture("filesrc location=/tracker/data/video/hype.mp4 ! decodebin ! videoconvert ! appsink", cv2.CAP_GSTREAMER)
+        print(f'Vid Cap created: {vid}')
     except Exception as e:
         print(e)
 
     out = cv2.VideoWriter(pipe_out, 0, 30, (int(vid.get(cv2.CAP_PROP_FRAME_WIDTH)), int(vid.get(cv2.CAP_PROP_FRAME_HEIGHT))), True)
+    print('Out')
     
 
     frame_num = 0
     # while video is running
     while True:
+        print('Inside While true')
         return_value, frame = vid.read()
         if return_value:
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)

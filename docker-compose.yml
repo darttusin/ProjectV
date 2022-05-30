@@ -37,9 +37,23 @@ services:
     container_name: web-container
     build: ./web
     ports:
-      - "9000:9000"
+      - 5000:5000
     networks:
       - rayadonet
+    volumes:
+      - tracker:/web/upload
+    restart: unless-stopped
+
+  tracker:
+    container_name: tracker-container
+    build: ./tracker
+    ports:
+      - 8080:8080
+      - 8081:8081
+    networks:
+      - rayadonet
+    volumes:
+       - tracker:/tracker/data/video
     restart: unless-stopped
 
 networks:
@@ -51,3 +65,4 @@ networks:
 volumes:
     postgres:
     pgadmin:
+    tracker:
